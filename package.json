@@ -1,5 +1,31 @@
 {
   "devDependencies": {
     "commander": "^2.20.0"
-  }
+  },
+  "name": "nestmodule",
+  "version": "0.0.1",
+  "description": "Nest module scaffolding creator for l2oot.control architecture",
+  "main": "index.js",
+  "dependencies": {},
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/Root-Control/nestmodule.git"
+  },
+  "keywords": [
+    "nest-module",
+    "generator",
+    "l2oot"
+  ],
+  "bin": {
+  	"nestmodule": "index.js"
+  },
+  "author": "Hiro Palacios",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/Root-Control/nestmodule/issues"
+  },
+  "homepage": "https://github.com/Root-Control/nestmodule#readme"
 }

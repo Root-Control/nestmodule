@@ -43,6 +43,7 @@ class FileCreation {
 
 						let newLocationFile = templateFiles[i].location.replace(/Templates/g, `${self.formats.lowerCasedText}s`).replace(/template/g, `${self.formats.lowerCasedText}s`);
 						
+
 						const code = moduleTemplate
 										.replace(/Template/g, self.formats.capitalizedText)
 										.replace(/template/g, self.formats.lowerCasedText)
