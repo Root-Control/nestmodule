@@ -2,10 +2,7 @@ import { Injectable, Inject, HttpException, HttpStatus } from '@nestjs/common';
 import { Model } from 'mongoose';
 
 import { TEMPLATE_MODEL_TOKEN, SERVER_CONFIG } from '../../server.constants';
-import { ITemplate } from './interfaces/template.interface';
-import { isEmptyObject } from '../../common/helpers/utils';
-
-import { parseImageURL } from '../../common/helpers/converters';
+import { ITemplate } from './interfaces/singularTemplate.interface';
 import { getErrorMessage } from '../../common/helpers/error-handler';
 
 @Injectable()

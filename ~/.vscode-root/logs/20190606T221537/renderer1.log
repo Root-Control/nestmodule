@@ -1,0 +1,9 @@
+[2019-06-06 22:17:19.632] [renderer1] [error] Error: Error: ENOENT: no such file or directory, stat '/home/hiroshi/Projects/nest-condominios/nest-module-writter/.vscode'
+[2019-06-06 22:19:55.855] [renderer1] [error] Model is disposed!: Error: Model is disposed!
+    at P._assertNotDisposed (file:///usr/share/code/resources/app/out/vs/workbench/workbench.main.js:1175:509)
+    at P.getVersionId (file:///usr/share/code/resources/app/out/vs/workbench/workbench.main.js:1180:300)
+    at e.<anonymous> (file:///usr/share/code/resources/app/out/vs/workbench/workbench.main.js:4814:533)
+    at Generator.next (<anonymous>)
+    at r (file:///usr/share/code/resources/app/out/vs/workbench/workbench.main.js:34:454)
+    at process._tickCallback (internal/process/next_tick.js:68:7)
+[2019-06-06 22:21:17.825] [renderer1] [error] Error: Error: ENOENT: no such file or directory, stat '/home/hiroshi/Projects/nest-condominios/.vscode'

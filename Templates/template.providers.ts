@@ -1,5 +1,5 @@
 import { Connection } from 'mongoose';
-import { TemplateSchema } from './schemas/template.schema';
+import { TemplateSchema } from './schemas/singularTemplate.schema';
 import { TEMPLATE_MODEL_TOKEN, DB_CONNECTION_TOKEN } from '../../server.constants';
 
 export const templateProviders = [

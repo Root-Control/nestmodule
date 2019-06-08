@@ -1,0 +1,12 @@
+[Info  - 10:20:06 PM] ESLint server stopped.
+[Info  - 10:20:07 PM] ESLint server running in node v10.2.0
+[Info  - 10:20:07 PM] ESLint server is running.
+[Info  - 10:20:09 PM] 
+Failed to load the ESLint library for the document /home/hiroshi/Projects/nest-condominios/nest-module-writter/file-creation.js
+
+To use ESLint please install eslint by running npm install eslint in the workspace folder nest-module-writter
+or globally using 'npm install -g eslint'. You need to reopen the workspace after installing eslint.
+
+If you are using yarn or pnpm instead of npm set the setting `eslint.packageManager` to either `yarn` or `pnpm`
+Alternatively you can disable ESLint for the workspace folder nest-module-writter by executing the 'Disable ESLint' command.
+[Info  - 10:20:38 PM] ESLint server stopped.

@@ -21,11 +21,11 @@ class FileCreation {
 		return new Promise(async (resolve, reject) => {
 			for (let x = 0; x < folders.length; x++) {
 				if (folders[x] !== 'middleware') {
-					if (folders[x] === 'joi') templateFiles.push({ type: folders[x], location: `./Templates/${folders[x]}/template.${folders[x]}.ts` });
-					else templateFiles.push({ type: folders[x], location: `./Templates/${folders[x]}s/template.${folders[x]}.ts` });
+					if (folders[x] === 'joi') templateFiles.push({ type: folders[x], location: `./Templates/${folders[x]}/singularTemplate.${folders[x]}.ts` });
+					else templateFiles.push({ type: folders[x], location: `./Templates/${folders[x]}s/singularTemplate.${folders[x]}.ts` });
 				} else {
-					templateFiles.push({ type: folders[x], location: `./Templates/${folders[x]}s/template-validator.${folders[x]}.ts` }, 
-									   { type: folders[x], location: `./Templates/${folders[x]}s/templateById.${folders[x]}.ts` });
+					templateFiles.push({ type: folders[x], location: `./Templates/${folders[x]}s/singularTemplate-validator.${folders[x]}.ts` }, 
+									   { type: folders[x], location: `./Templates/${folders[x]}s/singularTemplateById.${folders[x]}.ts` });
 				}
 			}
 
@@ -33,21 +33,28 @@ class FileCreation {
 				templateFiles.push({ type: 'root', location: `./Templates/template.${type}.ts` });
 			});
 
-			console.log(templateFiles);
-			console.log('finished');
+			console.log('Finished');
+			console.log('Next steps:');
+			console.log('1.- Add ' + this.formats.upperCasedText + '_MODEL_TOKEN');
+			console.log('2.- Declare the module in app.module');
+			console.log('3.- Enjoy');
 			for (let i =  0; i < templateFiles.length; i++) {
 				fs.readFile(templateFiles[i].location, 'utf8', async (err, buf) => {
 					if (err) reject(err);
 					else {
 						const moduleTemplate = buf.toString();
 
-						let newLocationFile = templateFiles[i].location.replace(/Templates/g, `${self.formats.lowerCasedText}s`).replace(/template/g, `${self.formats.lowerCasedText}s`);
-						
+						let newLocationFile = templateFiles[i].location.replace(/Templates/g, `../src/modules/${self.formats.lowerCasedText}s`)
+																		.replace(/singularTemplate/g, `${self.formats.lowerCasedText}`)
+																		.replace(/template/g, `${self.formats.lowerCasedText}s`);
+						console.log(newLocationFile);
 
 						const code = moduleTemplate
+										.replace(/singularTemplate/g, self.formats.lowerCasedText)
 										.replace(/Template/g, self.formats.capitalizedText)
 										.replace(/template/g, self.formats.lowerCasedText)
 										.replace(/TEMPLATE/g, self.formats.upperCasedText);
+
 						await self.writeCode(newLocationFile, code);
 						resolve();
 					}

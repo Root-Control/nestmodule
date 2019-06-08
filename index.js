@@ -3,6 +3,10 @@
 const program = require('commander'),
 	fs = require("fs"),
 	path = require('path'),
+	inquirer = require('inquirer'),
+	chalk = require('chalk'),
+	figlet = require('figlet'),
+	shell = require('shelljs'),
 	FolderCreation = require(path.resolve('./folder-creation')),
 	FileCreation = require(path.resolve('./file-creation'));
 
@@ -27,6 +31,16 @@ const program = require('commander'),
  */
 
 (async () => {
+	console.log(
+	    chalk.green(
+	      figlet.textSync("Root", {
+	        font: "Ghost",
+	        horizontalLayout: "default",
+	        verticalLayout: "default"
+	      })
+	    )
+	);
+
 	let moduleName;
 
 	program
@@ -45,7 +59,7 @@ const program = require('commander'),
 		await folderCreation.createSubFolders();
 		await fileCreation.createFiles();
 	} else {
-		console.log('name is not defined, please provide us a module name');
+		console.log('name is not defined, please provide us a module name using --module command');
 	}
 })();
 

@@ -1,0 +1,41 @@
+Looking for git in: git
+Using git 2.7.4 from git
+> git rev-parse --show-toplevel
+> git config --get commit.template
+Open repository: /home/hiroshi/Projects/etd/ETD_UI_REWORK
+> git status -z -u
+> git symbolic-ref --short HEAD
+> git rev-parse fl3_location
+> git rev-parse --symbolic-full-name fl3_location@{u}
+> git rev-list --left-right fl3_location...refs/remotes/origin/fl3_location
+> git for-each-ref --format %(refname) %(objectname) --sort -committerdate
+> git remote --verbose
+> git check-ignore -z --stdin
+> git status -z -u
+> git symbolic-ref --short HEAD
+> git rev-parse fl3_location
+> git rev-parse --symbolic-full-name fl3_location@{u}
+> git rev-list --left-right fl3_location...refs/remotes/origin/fl3_location
+> git for-each-ref --format %(refname) %(objectname) --sort -committerdate
+> git remote --verbose
+> git check-ignore -z --stdin
+> git check-ignore -z --stdin
+> git check-ignore -z --stdin
+> git check-ignore -z --stdin
+> git check-ignore -z --stdin
+> git show :src/app/private/pit/helper/helper.ts
+> git check-ignore -z --stdin
+> git show :src/app/private/graph/graph.module.ts
+> git status -z -u
+> git symbolic-ref --short HEAD
+> git rev-parse fl3_location
+> git rev-parse --symbolic-full-name fl3_location@{u}
+> git rev-list --left-right fl3_location...refs/remotes/origin/fl3_location
+> git for-each-ref --format %(refname) %(objectname) --sort -committerdate
+> git remote --verbose
+> git show :src/app/private/graph/graph.module.ts
+> git check-ignore -z --stdin
+> git check-ignore -z --stdin
+> git show :src/app/private/ainputs/list-ainputs/list-ainputs.component.html
+> git show :src/app/private/ainputs/list-ainputs/list-ainputs.component.ts
+> git show :src/app/private/graph/graph.module.ts

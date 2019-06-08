@@ -3,10 +3,15 @@
     "commander": "^2.20.0"
   },
   "name": "nestmodule",
-  "version": "0.0.1",
+  "version": "0.0.2",
   "description": "Nest module scaffolding creator for l2oot.control architecture",
   "main": "index.js",
-  "dependencies": {},
+  "dependencies": {
+    "chalk": "^2.4.2",
+    "figlet": "^1.2.1",
+    "inquirer": "^6.3.1",
+    "shelljs": "^0.8.3"
+  },
   "scripts": {
     "test": "echo \"Error: no test specified\" && exit 1"
   },
@@ -20,7 +25,7 @@
     "l2oot"
   ],
   "bin": {
-  	"nestmodule": "index.js"
+    "nestmodule": "index.js"
   },
   "author": "Hiro Palacios",
   "license": "ISC",

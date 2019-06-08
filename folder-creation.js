@@ -9,7 +9,7 @@ class FolderCreation {
 
 	createRootFolder() {
 		return new Promise(resolve => {
-			const rootDir = `./${this.moduleName}s`;
+			const rootDir = `../src/modules/${this.moduleName}s`;
 			fs.mkdirSync(rootDir);
 			resolve();
 		});
@@ -27,7 +27,7 @@ class FolderCreation {
 
 	createInterfaceFolder() {
 		return new Promise((resolve, reject) => {
-			const interfaceDir = `./${this.moduleName}s/interfaces`;
+			const interfaceDir = `../src/modules/${this.moduleName}s/interfaces`;
 
 			fs.mkdir(interfaceDir, { recursive: true }, err => {
 			  if (err) reject();
@@ -39,9 +39,9 @@ class FolderCreation {
 
 	createJoiFolder() {
 		return new Promise((resolve, reject) => {
-			const interfaceDir = `./${this.moduleName}s/joi`;
+			const joiDir = `../src/modules/${this.moduleName}s/joi`;
 
-			fs.mkdir(interfaceDir, { recursive: true }, err => {
+			fs.mkdir(joiDir, { recursive: true }, err => {
 			  if (err) reject();
 			  else resolve();
 			});
@@ -51,9 +51,9 @@ class FolderCreation {
 
 	createMiddlewaresFolder() {
 		return new Promise((resolve, reject) => {
-			const interfaceDir = `./${this.moduleName}s/middlewares`;
+			const middlewareDir = `../src/modules/${this.moduleName}s/middlewares`;
 
-			fs.mkdir(interfaceDir, { recursive: true }, err => {
+			fs.mkdir(middlewareDir, { recursive: true }, err => {
 			  if (err) reject();
 			  else resolve();
 			});
@@ -63,9 +63,9 @@ class FolderCreation {
 
 	createSchemasFolder() {
 		return new Promise((resolve, reject) => {
-			const interfaceDir = `./${this.moduleName}s/schemas`;
+			const schemaDir = `../src/modules/${this.moduleName}s/schemas`;
 
-			fs.mkdir(interfaceDir, { recursive: true }, err => {
+			fs.mkdir(schemaDir, { recursive: true }, err => {
 			  if (err) reject();
 			  else resolve();
 			});

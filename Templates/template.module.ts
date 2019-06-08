@@ -7,9 +7,9 @@ import { TemplatesService } from './templates.service';
 
 import { TemplatesGateway } from './templates.gateway';
 
-import { TemplateIdMiddleware } from './middlewares/templateById.middleware';
+import { TemplateIdMiddleware } from './middlewares/singularTemplateById.middleware';
 //  Middlewares
-import { templateValidatorMiddleware } from '../templates/middlewares/template-validator.middleware';
+import { templateValidatorMiddleware } from '../templates/middlewares/singularTemplate-validator.middleware';
 
 @Module({
   imports: [DatabaseModule],
