@@ -16,7 +16,7 @@ class FileCreation {
 	createFiles() {
 		const self = this;
 		const folders = ['interface', 'joi', 'middleware', 'schema'];
-		const types = ['controller', 'gateway', 'module', 'providers', 'service'];
+		const types = ['controller', 'module', 'providers', 'service'];
 		let templateFiles = [];
 		return new Promise(async (resolve, reject) => {
 			for (let x = 0; x < folders.length; x++) {

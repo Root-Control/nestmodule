@@ -5,32 +5,35 @@ import { TemplatesController } from './templates.controller';
 import { templateProviders } from './templates.providers';
 import { TemplatesService } from './templates.service';
 
-import { TemplatesGateway } from './templates.gateway';
-
-import { TemplateIdMiddleware } from './middlewares/singularTemplateById.middleware';
+import { TemplateByIdMiddleware } from './middlewares/singularTemplateById.middleware';
 //  Middlewares
-import { templateValidatorMiddleware } from '../templates/middlewares/singularTemplate-validator.middleware';
+import { TemplateValidatorMiddleware } from '../templates/middlewares/singularTemplate-validator.middleware';
+
+import { AppGateway } from '../../app.gateway';
 
 @Module({
-  imports: [DatabaseModule],
-  controllers: [TemplatesController],
-  providers: [
-    TemplatesGateway,
-    ...templateProviders,
-    TemplatesService
-  ],
-  exports: [
-    ...templateProviders
-  ]
+    imports: [DatabaseModule],
+    controllers: [TemplatesController],
+    providers: [
+        ...templateProviders,
+        TemplatesService,
+        AppGateway
+    ],
+    exports: [
+        ...templateProviders
+    ]
 })
-export class TemplatesModule implements NestModule{
-  public configure(consumer: MiddlewareConsumer) {
-    consumer
-      .apply(templateValidatorMiddleware)
-      .forRoutes({ path: 'templates', method: RequestMethod.POST });
+export class TemplatesModule implements NestModule {
+    constructor() {
+        console.log('Templates module loaded');
+    }
+    public configure(consumer: MiddlewareConsumer) {
+        consumer
+            .apply(TemplateValidatorMiddleware)
+            .forRoutes({ path: 'templates', method: RequestMethod.POST });
 
-    consumer.apply(TemplateIdMiddleware)
-      .forRoutes({ path: 'templates/:templateId', method: RequestMethod.ALL });
-      //  users id calling middleware for findById users before run another methods like "delete/update/read"
-  }
+        consumer.apply(TemplateByIdMiddleware)
+            .forRoutes({ path: 'templates/:templateId', method: RequestMethod.ALL });
+        //  users id calling middleware for findById users before run another methods like "delete/update/read"
+    }
 }

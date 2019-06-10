@@ -9,3 +9,20 @@ or globally using 'npm install -g eslint'. You need to reopen the workspace afte
 
 If you are using yarn or pnpm instead of npm set the setting `eslint.packageManager` to either `yarn` or `pnpm`
 Alternatively you can disable ESLint for the workspace folder nest-condominios by executing the 'Disable ESLint' command.
+[Info  - 7:09:31 AM] 
+Failed to load the ESLint library for the document /home/hiroshi/Projects/nest-condominios/package.json
+
+To use ESLint please install eslint by running npm install eslint in the workspace folder nest-condominios
+or globally using 'npm install -g eslint'. You need to reopen the workspace after installing eslint.
+
+If you are using yarn or pnpm instead of npm set the setting `eslint.packageManager` to either `yarn` or `pnpm`
+Alternatively you can disable ESLint for the workspace folder nest-condominios by executing the 'Disable ESLint' command.
+[Info  - 7:09:33 AM] 
+Failed to load the ESLint library for the document /home/hiroshi/Projects/nest-condominios/package.json
+
+To use ESLint please install eslint by running npm install eslint in the workspace folder nest-condominios
+or globally using 'npm install -g eslint'. You need to reopen the workspace after installing eslint.
+
+If you are using yarn or pnpm instead of npm set the setting `eslint.packageManager` to either `yarn` or `pnpm`
+Alternatively you can disable ESLint for the workspace folder nest-condominios by executing the 'Disable ESLint' command.
+[Info  - 7:15:56 AM] ESLint server stopped.

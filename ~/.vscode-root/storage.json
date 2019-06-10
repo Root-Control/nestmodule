@@ -3,6 +3,7 @@
     "openedPathsList": {
         "workspaces3": [
             "file:///home/hiroshi/Projects/nest-condominios",
+            "file:///home/hiroshi/Projects/Architectures/Nest-Tenant",
             "file:///home/hiroshi/Projects/etd/ETD_UI_REWORK",
             "file:///home/hiroshi/Projects/etd/ETD_SERVER",
             "file:///home/hiroshi/Projects/nest-condominios/nest-module-writter"
@@ -59,6 +60,17 @@
                                     },
                                     "enabled": true,
                                     "label": "/home/hiroshi/Projects/nest-condominios"
+                                },
+                                {
+                                    "id": "openRecentFolder",
+                                    "uri": {
+                                        "$mid": 1,
+                                        "external": "file:///home/hiroshi/Projects/Architectures/Nest-Tenant",
+                                        "path": "/home/hiroshi/Projects/Architectures/Nest-Tenant",
+                                        "scheme": "file"
+                                    },
+                                    "enabled": true,
+                                    "label": "/home/hiroshi/Projects/Architectures/Nest-Tenant"
                                 },
                                 {
                                     "id": "openRecentFolder",
@@ -1404,10 +1416,10 @@
             "backupPath": "/home/hiroshi/Projects/nest-condominios/nest-module-writter/~/.vscode-root/Backups/ce8da576f1cbb466e7c52f1b8c4d6bfe",
             "uiState": {
                 "mode": 0,
-                "x": 65,
+                "x": 1600,
                 "y": 24,
-                "width": 1535,
-                "height": 876
+                "width": 1920,
+                "height": 1056
             }
         },
         "openedWindows": []
